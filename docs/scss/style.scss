@@ -1,0 +1,168 @@
+@import "_reset.scss";
+@import "_fonts.scss";
+@import "_mixins.scss";
+@import "_vars.scss";
+// =============================GLOBAL==================================================================
+// =============================GLOBAL==================================================================
+html, body{   
+    color: #000000;
+    overflow-x: hidden;
+}
+.wrapper{
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+}
+.container{
+    max-width: 1136px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+.container2{
+    max-width: 1244px;
+    padding: 0 15px;
+    margin: 0 auto;
+    height: 100%;
+}
+.button{
+    font-size: 18px;
+line-height: 27px;
+@extend %Poppins500;
+padding: 14px 46px;
+background-color: #ECB942;
+box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.16);
+border-radius: 8px;
+}
+.button--empty{
+    background-color: transparent;
+    box-shadow: none;
+    position: relative;
+}
+
+//===========================HEADER__TOP=======================================================
+//===========================HEADER__TOP======================================================
+.header{
+    
+    &-inner{
+        position: relative;
+        padding-bottom: 90px;
+    }
+    &-inner::after{
+        position: absolute;
+        content: "";
+        width:1378px;
+        height:718px;
+        background: url(../img/bacground/bg-header.svg);
+        top: 0;
+        right:0;
+        z-index: -1;
+    }
+
+    &__top{
+        height: 90px;
+        background: rgba(255, 255, 255, 0.9);
+box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.05);
+backdrop-filter: blur(5px);
+    }
+    &__top-inner{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: 28px;
+    }
+    &__top-logo{
+        margin-right: 40px;
+    }
+    &__top-list{
+        display: flex;
+    }
+    &__top-item{
+    @extend %Poppins600;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+    margin-right: 40px;
+    position: relative;
+    }
+    &__top-item::after{
+        content: "";
+        background: url(../img/bacground/bg.svg);
+        @extend %pos-center;
+        width: 117px;
+    height: 40px;
+    z-index: -1;
+    display: none;
+        
+    }
+    &__top-item:hover &__top-item::after{
+        display: block;
+        text-decoration: underline;
+        
+    }
+    &__top-item:last-child{
+        margin-right: 0;
+    }
+    &__heading{
+        margin-top: 180px;
+    }
+    &__heading-title{
+        font-size: 64px;
+    line-height: 81px;
+    @extend %Begum;
+    max-width: 620px;
+    margin-bottom: 54px;
+    position: relative;
+    }
+    &__heading-title::after{
+        position: absolute;
+        content: "";
+        background: url(../img/bacground/bg2.svg) no-repeat;
+        width: 243px;
+        height: 43px;
+        top: 40px;
+        left: 0;
+        z-index: -1;
+    }
+    &__heading-text{
+        width: 589px;
+        @extend %Poppins400;
+        font-size: 18px;
+    line-height: 27px;
+    margin-left: 5px;
+    }
+    &__buttons-box{
+        display: flex;
+        margin-top: 54px;
+    }
+    .button--empty::after{
+        content: "";
+        position: absolute;
+        background: url(../img/icon/arrow.svg);
+        width: 18px;
+        height: 19px;
+        top: 50%;
+        right: 8px;
+        transform: translateY(-50%);
+        
+    }
+    &__body-inner{
+        display: flex
+    }
+    &__textbooks{
+        align-self: flex-end;
+        margin: 0 0 45px 195px;
+        position: relative;
+        flex-shrink: 50%;
+    }
+    &__textbooks-number{
+        @extend %Begum;
+        font-size: 48px;
+    line-height: 62px;
+    }
+    &__textbooks-text{
+        font-size: 16px;
+    line-height: 24px;
+    @extend %Poppins400;
+    }
+}
